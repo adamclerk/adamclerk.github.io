@@ -45,7 +45,7 @@
 }
 
 .resume ul li {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .resume ul.accomplishments {
@@ -67,11 +67,10 @@
 }
 
 .resume ul.tags li {
-  display: inline;
+  display: inline-block;
   border: solid 1px; #DDD;
   border-radius: 3px;
   padding: 5px;
-  line-height: 40px;
 }
 
 .resume ul.qualifications li {
