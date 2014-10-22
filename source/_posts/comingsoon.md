@@ -1,0 +1,14 @@
+---
+uuid: 1246149a-f0ce-4223-af69-c0ba4b11cfb8
+author: Adam Clark
+email : adamclerk@gmail.com
+title: Coming Soon
+date: 2014-10-21
+header: 1
+readMore: 0
+share: 0
+---
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+<!-- more -->

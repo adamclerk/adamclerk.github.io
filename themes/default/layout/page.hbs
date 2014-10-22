@@ -1,0 +1,28 @@
+{{!< default}}
+<div id="post_media_permalink_container" style="background-image: url('/img/header{{page.header}}.jpg');">
+    <div id="post_media_permalink"></div>
+</div>
+<div id="content_permalink">
+  <article class="post">
+    <section class="post_media">
+      <div class="post_type" id="photo"></div>
+      <img src="/img/header{{page.header}}.jpg" alt="Photo" />
+    </section>
+    <section class="post_content">
+      <div class="post_body">
+        {{{ page.content }}}
+      </div>
+
+      <footer class="post_footer">
+        <div class="post_footer_left">
+        </div>
+        <div class="post_social_media">
+          <!--<a href="#" class="share_facebook" title="Share on Facebook"><i class="fa fa-thumbs-up"></i>Share</a>
+          <a href="#" class="share_twitter" title="Share on Twitter"><i class="fa fa-twitter"></i>Tweet</a>-->
+        </div>
+      </footer>
+    </section>
+  </article>
+</div>
+
+<script type="text/javascript" src="/js/blur.min.js"></script>

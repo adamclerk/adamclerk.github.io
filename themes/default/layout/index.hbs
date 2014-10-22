@@ -1,0 +1,71 @@
+{{!< default}}
+
+<!-- Subheader -->
+<header id="subheader">
+
+    <div id="subheader_wrap">
+
+        <!-- Icon Background -->
+        <div id="icon_border"></div>
+
+    </div>
+
+</header>
+
+<!-- Main Content -->
+<section id="content">
+
+<!-- Icon -->
+<div id="icon_wrap">
+
+    <!-- Icon Image can be modified in #Icon CSS Rule -->
+    <div id="icon">
+        <a href="#" title="Icon"><div id="icon_link"></div></a>
+    </div>
+
+</div>
+
+<div id="content_wrap">
+  {{#if page.posts }}
+    {{#foreach page.posts}}
+      <article class="post">
+          <section class="post_media">
+              <div class="post_type" id="photo"></div>
+              <img src="/img/header{{header}}.jpg" alt="Photo" />
+          </section>
+          <section class="post_content">
+              <header class="post_header">
+                  <div class="post_title"><a href="/{{ path }}">{{ title }}</a></div>
+                  <div class="post_date">{{formatDate date "%B %d, %Y"}}</div>
+              </header>
+              <div class="post_body">
+                  {{{ excerpt }}}
+              </div>
+              {{#and readMore share}}
+                <footer class="post_footer">
+                    <div class="post_footer_left">
+                        {{#if readMore}}
+                          <a href="{{ path }}" title="Read More"><div class="post_read_more_pad"><div class="post_read_more">Read More</div></div></a>
+                        {{/if}}
+                        <!--<div class="post_comment_icons">
+                            <ul>
+                                <li><a href="{{path}}" class="user_icon" title="Users"><i class="fa fa-user"></i></a></li>
+                                <li><a href="post_image.html" class="comment_icon" title="Comments"><i class="fa fa-comment"></i></a></li>
+                                <li><a href="post_image.html" class="heart_icon" title="Favorites"><i class="fa fa-heart"></i>XX</a></li>
+                            </ul>
+                        </div>-->
+                    </div>
+                    <div class="post_social_media">
+                      {{#if share}}
+                        <a href="#" class="share_facebook" title="Share on Facebook"><i class="fa fa-thumbs-up"></i>Share</a>
+                        <a href="#" class="share_twitter" title="Share on Twitter"><i class="fa fa-twitter"></i>Tweet</a>
+                      {{/if}}
+                    </div>
+                </footer>
+              {{/and}}
+          </section>
+      </article>
+    {{/foreach}}
+  {{/if}}
+</div>
+{{> pagination}}

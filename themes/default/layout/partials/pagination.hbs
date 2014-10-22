@@ -1,0 +1,19 @@
+{{#or page.prev page.next}}
+  <footer>
+    <nav id="pagination">
+      <ul>
+        {{#if page.prev}}
+          <li><a href="/{{page.prev_link}}" class="pagination_link" id="left"><i class="fa fa-angle-double-left"></i> Previous</a></li>
+        {{/if}}
+      </ul>
+      <ul>
+
+      </ul>
+      {{#if page.next}}
+        <ul>
+          <li><a href="/{{page.next_link}}" class="pagination_link">Next <i class="fa fa-angle-double-right"></i></a></li>
+        </ul>
+      {{/if}}
+    </nav>
+  </footer>
+{{/or}}

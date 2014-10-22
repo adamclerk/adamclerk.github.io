@@ -1,0 +1,16 @@
+
+<section id="related_posts">
+  <div class="footer_header">Related Posts</div>
+{{#related page.related}}
+  <div class="related_post_box" id="col_{{related_id}}">
+    <div class="related_post_box_media" id="{{related_id}}">
+      <a href="#"><div class="related_post_box_media_read_more" style="display: none;"><img src="/img/view_icon.png" alt="View Article Icon" title="View Article"><br>View Article</div></a>
+      <img src="/img/header{{header}}.jpg" alt="Related Post 1">
+    </div>
+    <div class="related_post_box_content">
+      <p><span class="dark_font_header"><a href="#">{{title}}</a></span></p>
+      <p>{{tagLine}}</p>
+    </div>
+  </div>
+{{/related}}
+</section>

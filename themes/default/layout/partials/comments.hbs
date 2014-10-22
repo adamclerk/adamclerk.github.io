@@ -1,0 +1,70 @@
+<section id="comments">
+</section>
+<section id="comments">
+  <div class="comment_box" id="write">
+      <div class="coment_box_content">
+        <a href="https://github.com/adamclerk/adamclerk.github.com/issues/{{page.commentId}}" class="contact_button" target="_blank">
+          <span>
+            Author Comment On Github
+          </span>
+        </a>
+      </div>
+  </div>
+</section>
+
+
+<script type="text/template" id="commentCount">
+<div class="footer_header">{count} Comments</div>
+</script>
+<script type="text/template" id="commentTemplate">
+<div class="{cclass}">
+  <div class="comment_box_avatar"><img src="{cavatarlink}" width="250" height="171" alt="Icon"></div>
+  <div class="comment_box_content markdown-body">
+    <p><span class="dark_font">{cuser}</span> - {cdate}</p>
+    {cbody}
+  </div>
+</div>
+</script>
+
+<script type="text/javascript" src="http://datejs.googlecode.com/svn/trunk/build/date-en-US.js"></script>
+
+<script type="text/javascript">
+$.ajax("https://api.github.com/repos/adamclerk/adamclerk.github.com/issues/{{page.commentId}}/comments", {
+  headers: {Accept: "application/vnd.github.full+json"},
+  success: function(msg){
+    loadComments(msg);
+  }
+});
+
+function loadComments(data) {
+  var commentContainer = jQuery('#comments');
+  var countTemplate = jQuery('#commentCount').html();
+  var commentTemplate = jQuery("#commentTemplate").html();
+  var makeComment = jQuery("#makeComment").html();
+
+  commentContainer.html(countTemplate.replace(/{count}/g, data.length));
+
+  for (var i=0; i<data.length; i++) {
+    var comment = data[i];
+    var cclass = "comment_box";
+    var cuser = comment.user.login;
+    var cuserlink = "https://www.github.com/" + comment.user.login;
+    var clink = "https://github.com/adamclerk/adamclerk.github.com/issues/{{page.commentId}}#issuecomment-" + comment.url.substring(comment.url.lastIndexOf("/")+1);
+    var cbody = comment.body_html;
+    var cavatarlink = comment.user.avatar_url;
+    var cdate = Date.parse(comment.created_at).toString("yyyy-MM-dd h:mm:ss", 10);
+
+    if (cuser == "adamclerk") {
+      cclass = "comment_box_reply";
+    }
+    commentContainer.append(
+      commentTemplate
+        .replace(/{cavatarlink}/g, cavatarlink)
+        .replace(/{cuser}/g, cuser)
+        .replace(/{cbody}/g, cbody)
+        .replace(/{cdate}/g, cdate)
+        .replace(/{cclass}/g, cclass)
+    )
+  }
+}
+</script>
