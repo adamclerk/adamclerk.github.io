@@ -1,0 +1,78 @@
+.resume, .resume p, .resume div {
+  font-size: 16px;
+  line-height: 24px;
+}
+.resume h1{
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+.resume h2{
+  font-size: 20px;
+  margin: 10px;
+  margin-left: 0;
+}
+
+.level h2 {
+  font-size: 18px;
+}
+
+.level .level h2 {
+  font-size: 16px;
+}
+
+.level .level .level h2 {
+  font-size: 14px;
+}
+
+.resume .level {
+  margin-left: 20px;
+}
+
+.resume .purpose {
+  font-size: 18px;
+  text-align: center;
+  margin: 0 0 40px 0;
+}
+
+.resume .purpose div {
+  margin-bottom: 15px;
+}
+
+.resume ul {
+  list-style: none;
+  marign-left: 20px;
+}
+
+.resume ul li {
+  margin-bottom: 20px;
+}
+
+.resume ul.accomplishments {
+  list-style: none;
+  marign-left: 20px;
+}
+
+.resume ul.accomplishments li {
+  margin-bottom: 20px;
+}
+
+.resume ul.qualifications {
+  list-style: none;
+}
+
+.resume ul.tags {
+  list-style: none;
+  margin: 20px 0 20px 20px;
+}
+
+.resume ul.tags li {
+  display: inline;
+  border: solid 1px; #DDD;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.resume ul.qualifications li {
+  margin: 5px;
+}
