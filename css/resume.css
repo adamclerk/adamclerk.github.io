@@ -71,6 +71,7 @@
   border: solid 1px; #DDD;
   border-radius: 3px;
   padding: 5px;
+  line-height: 40px;
 }
 
 .resume ul.qualifications li {
